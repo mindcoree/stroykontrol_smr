@@ -1,5 +1,4 @@
 """Generate the report and presentation from measured pipeline artifacts."""
-from copy import deepcopy
 import json
 from pathlib import Path
 
@@ -7,10 +6,6 @@ from docx import Document
 from docx.shared import Cm, Pt as DPt, RGBColor as DColor
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
-from pptx import Presentation
-from pptx.util import Inches, Pt
-from pptx.dml.color import RGBColor
-from pptx.enum.shapes import MSO_SHAPE
 
 ROOT = Path(__file__).resolve().parents[1]
 REP = ROOT/'reports'
@@ -208,144 +203,9 @@ def make_report(pages):
     (REP/'course_report.md').write_text('\n'.join(markdown),encoding='utf-8')
 
 
-def text(slide,x,y,w,h,s,size=16,color=DARK,bold=False,font='Arial'):
-    sh=slide.shapes.add_textbox(Inches(x),Inches(y),Inches(w),Inches(h))
-    tf=sh.text_frame;tf.word_wrap=True
-    tf.margin_left=tf.margin_right=0;tf.margin_top=tf.margin_bottom=0
-    for i,line in enumerate(str(s).split('\n')):
-        par=tf.paragraphs[0] if i==0 else tf.add_paragraph()
-        par.text=line;par.font.name=font;par.font.size=Pt(size);par.font.bold=bold;par.font.color.rgb=RGBColor.from_string(color)
-        par.space_after=Pt(7)
-    return sh
-
-
-def rect(slide,x,y,w,h,fill,line=None):
-    sh=slide.shapes.add_shape(MSO_SHAPE.RECTANGLE,Inches(x),Inches(y),Inches(w),Inches(h))
-    sh.fill.solid();sh.fill.fore_color.rgb=RGBColor.from_string(fill)
-    if line:sh.line.color.rgb=RGBColor.from_string(line);sh.line.width=Pt(.6)
-    else:sh.line.fill.background()
-    return sh
-
-
-def base(deck,section,title):
-    s=deck.slides.add_slide(deck.slide_layouts[6]);s.background.fill.solid();s.background.fill.fore_color.rgb=RGBColor.from_string(PAPER)
-    border=rect(s,.3,.3,12.73,6.9,PAPER,BORDER)
-    rect(s,.7,.67,.13,.13,ORANGE)
-    text(s,.95,.6,11,.35,section,11,ORANGE,True)
-    text(s,.7,.95,11.9,.8,title,28,DARK,True,'Bahnschrift')
-    rect(s,.7,1.72,11.85,.012,BORDER)
-    text(s,.7,6.84,7.4,.3,'Chicago Building Violations · снимок 09.10.2026 · учебный проект',8,GRAY)
-    rect(s,8.45,6.70,4.55,.5,PAPER,DARK)
-    text(s,8.60,6.76,2.8,.17,'СТРОЙКОНТРОЛЬ СМР · РК-1',7,GRAY,True)
-    text(s,8.60,6.96,2.8,.20,'Медиханов Тимур',10,DARK,True)
-    text(s,11.55,6.76,1.2,.35,str(len(deck.slides)),14,ORANGE,True)
-    return s
-
-
-def slide_table(s,headers,rows,widths=None,y=2.1,font=15):
-    widths=widths or [11.85/len(headers)]*len(headers)
-    x=.7
-    for header,w in zip(headers,widths):text(s,x,y,w-.12,.35,header,11,GRAY,True);x+=w
-    y+=.55
-    for row in rows:
-        rect(s,.7,y-.08,11.85,.012,BORDER);x=.7
-        height=.70 if len(rows)<=4 else .49
-        for v,w in zip(row,widths):text(s,x,y,w-.14,height,str(v),font,DARK);x+=w
-        y+=height+.12
-
-
-def copy_slide(deck,src):
-    s=deck.slides.add_slide(deck.slide_layouts[6])
-    for sh in src.shapes:s.shapes._spTree.insert_element_before(deepcopy(sh.element),'p:extLst')
-    return s
-
-
 def make_presentation(q,m,eda,checks):
-    original=Presentation(ROOT/'archive/presentation_original.pptx')
-    deck=Presentation();deck.slide_width=original.slide_width;deck.slide_height=original.slide_height
-    cover=copy_slide(deck,original.slides[0])
-    replacements={
-        '0,9 ГБ':f"{q['rows']/1e6:.2f} млн",
-        'ЗАДАЧА 4 · РК-1 · DATA SCIENCE':'КУРСОВОЙ ПРОЕКТ · РК-1 · DATA SCIENCE',
-        'Приложение для корпоративной ERP-платформы':'Аналитическая часть самостоятельного учебного проекта',
-        'Обоснование программных средств на полном архиве\npandas  ·  Parquet  ·  DuckDB':'Постановка задачи · качество данных · 7 графиков EDA\nBaseline · план дальнейшей работы · воспроизводимый код',
-        '2\u00a0030\u00a0101 запись\n930 МБ в CSV':f"{n(q['rows'])} записей\n{q['csv_mb']:.0f} МБ в CSV",
-        'ДАТА ЗАМЕРОВ':'ДАТА АНАЛИЗА','26.09.2026 12:17':'09.10.2026'}
-    for sh in cover.shapes:
-        if sh.has_text_frame and sh.text in replacements:
-            value=replacements[sh.text];style=sh.text_frame.paragraphs[0].runs[0] if sh.text_frame.paragraphs[0].runs else None
-            props=deepcopy(style._r.rPr) if style is not None and style._r.rPr is not None else None
-            sh.text_frame.clear()
-            for i,line in enumerate(value.split('\n')):
-                p=sh.text_frame.paragraphs[0] if i==0 else sh.text_frame.add_paragraph();r=p.add_run();r.text=line
-                if props is not None:r._r.insert(0,deepcopy(props))
-    s=base(deck,'01 — ПОСТАНОВКА ЗАДАЧИ','Кому и для какого решения нужен результат')
-    for x,label,body in [(.7,'ПОЛЬЗОВАТЕЛЬ','Координатор инспекций и руководитель строительного контроля.'),(4.8,'РЕШЕНИЕ','Приоритет внимания к уже запланированной инспекции.'),(8.8,'ВЫХОД','Вероятность FAILED среди записанных FAILED/PASSED.')]:
-        text(s,x,2.1,3.7,.4,label,11,ORANGE,True);text(s,x,2.65,3.7,1.4,body,18)
-    text(s,.7,4.2,11.7,.75,'FN: пропущенная проблемная проверка — 5 у.е.\nFP: лишнее внимание к успешной проверке — 1 у.е.',18)
-    text(s,.7,5.5,11.7,.85,'Критерий: AP ≥ Dummy + 0.05; recall ≥ 0.80; precision ≥ доли FAILED.\nЦена ошибки — учебная гипотеза. Решение проверяет специалист.',16,GRAY)
-    s=base(deck,'02 — ИСТОЧНИК ДАННЫХ','Полный архив, но ограниченный охват')
-    slide_table(s,['ПАРАМЕТР','СНИМОК 09.10.2026'],[
-        ['Источник','Chicago Data Portal · 22u3-xenr'],['Строк / столбцов',f"{n(q['rows'])} / {q['columns']}"],
-        ['Инспекции после агрегации',n(q['aggregated_inspections'])],['Бинарная выборка',n(q['labeled_inspections'])],
-        ['Формат / доступ','CSV → Parquet ZSTD · открытый экспорт без токена']],widths=[4.1,7.75])
-    text(s,.7,5.9,11.8,.6,'Журнал нарушений Чикаго: не все инспекции и не локальные данные СМР.\nРезультат нельзя переносить на другой город без проверки.',15,ORANGE,True)
-    for offset in [0,4]:
-        s=base(deck,f'03 — КАЧЕСТВО ДАННЫХ · {offset+1}–{offset+4}','Восемь проверок качества данных')
-        slide_table(s,['ПРОВЕРКА','РЕЗУЛЬТАТ','РЕШЕНИЕ'],checks[offset:offset+4],widths=[2.5,4.2,5.15],font=13)
-        text(s,.7,6.0,11.8,.5,'Использован стандартный чек-лист: перечень преподавателя не предоставлен.',12,GRAY)
-    s=base(deck,'04 — ПОДГОТОВКА','Одна строка модели — одна инспекция')
-    for x,label,value,body in [(.7,'RAW',n(q['rows']),'Записи нарушений\nСтрогий CSV-парсер\nХеш и метаданные'),(4.8,'PROCESSED',n(q['aggregated_inspections']),'Группировка inspection_number\nПроверка конфликтов\nЧисло нарушений для EDA'),(8.8,'MODEL DATA',n(q['labeled_inspections']),'Только FAILED / PASSED\nКонфликты исключены\n8 входных признаков')]:
-        rect(s,x,2.1,3.75,3.6,'FFFFFF',BORDER);text(s,x+.2,2.35,3.35,.4,label,12,ORANGE,True)
-        text(s,x+.2,3.0,3.35,.65,value,27,DARK,True,'Bahnschrift');text(s,x+.2,4.0,3.35,1.4,body,16)
-    text(s,.7,6.0,11.8,.5,'Текущие нарушения, статус и результаты устранения исключены из входов модели.',15,GRAY)
-    for i,ins in enumerate(eda):
-        s=base(deck,f'05 — РАЗВЕДОЧНЫЙ АНАЛИЗ · {i+1}/7',ins['title'][3:])
-        image=s.shapes.add_picture(str(FIG/(ins['id']+'.png')),Inches(.55),Inches(2.05),width=Inches(8.55))
-        text(s,9.35,2.1,3.0,.4,'ВЫВОД',11,ORANGE,True)
-        text(s,9.35,2.65,2.95,3.65,ins['conclusion'],15)
-    s=base(deck,'06 — BASELINE','Временная оценка без текущих нарушений')
-    slide_table(s,['ВЫБОРКА','ПЕРИОД','ИНСПЕКЦИИ','FAILED'],[[k,v['date_from'][:4]+'–'+v['date_to'][:4],n(v['n']),f"{v['failed_share']:.1%}"] for k,v in m['splits'].items()],widths=[3,3,3,2.85])
-    text(s,.7,5.0,11.8,1.3,'Dummy prior → частота FAILED по train\nLogistic regression → служба, категория, календарь и координаты\nПорог: минимум 5×FN + FP на 2024; 2025 используется только для оценки.',17)
-    s=base(deck,'06 — BASELINE · РЕЗУЛЬТАТ','Простая модель против частотной точки отсчёта')
-    test=[r for r in m['metrics'] if r['split']=='test']
-    slide_table(s,['МОДЕЛЬ','AP','ROC-AUC','PRECISION','RECALL','COST/N'],[[r['model'],f(r['average_precision']),f(r['roc_auc']),f(r['precision']),f(r['recall']),f(r['cost_per_inspection'])] for r in test],widths=[3.7,1.4,1.65,1.8,1.55,1.75],font=15)
-    s.shapes.add_picture(str(FIG/'baseline_confusion.png'),Inches(.7),Inches(4.15),width=Inches(7.0))
-    lr=next(r for r in test if r['model']=='Logistic regression')
-    text(s,8.05,4.15,4.15,2.2,f"Порог: {lr['threshold']:.3f}\nFN: {n(lr['fn'])} · FP: {n(lr['fp'])}\nКритерий: {'достигнут' if m['success_criterion_met'] else 'не достигнут'}\nВ приоритете {(lr['tp']+lr['fp'])/lr['n']:.1%} проверок.\nЭкономия внимания ещё не доказана.",16,ORANGE,True)
-    s=base(deck,'07 — ПЛАН И РИСКИ','Что проверить после первого рубежного контроля')
-    slide_table(s,['ЭТАП','РАБОТА','ОСНОВНОЙ РИСК'],[
-        ['8–9 недели','Уточнить статусы, даты и доступность полей','Утечка через изменённые поля'],
-        ['10–11 недели','Получить полный журнал и локальные данные','Смещение архива нарушений'],
-        ['12–13 недели','Backtest, новые объекты, модель без служб','Дрейф и переносимость'],
-        ['14–15 недели','Согласовать стоимость и лимит очереди','Учебная цена ≠ реальный ущерб']],widths=[2.1,5.4,4.35],font=15)
-    text(s,.7,6.0,11.8,.45,'Текущая сдача — аналитика. Разработка и внедрение ERP остаются вне её объёма.',15,GRAY)
-    s=base(deck,'08 — РЕЗУЛЬТАТ ПРОЕКТА','Все шесть пунктов задания покрыты')
-    text(s,.7,2.1,7.5,3.9,'01  Постановка: пользователь, решение, критерий, ошибки\n02  Источник: полный снимок, формат, доступ и ограничения\n03  Качество: восемь проверок с измеренными результатами\n04  EDA: семь графиков и выводы по каждому\n05  Baseline: Dummy prior и логистическая регрессия\n06  План: этапы, риски и способы их уменьшить',20)
-    rect(s,8.8,2.1,3.75,3.8,DARK)
-    text(s,9.05,2.45,3.25,.5,'ВОСПРОИЗВОДИМОСТЬ',11,ORANGE,True)
-    text(s,9.05,3.15,3.25,2.2,'Отчёт · notebook · код\nЗафиксированный снимок\nМетрики и графики\nGitHub-репозиторий',18,'FFFFFF')
-    text(s,.7,6.1,11.8,.4,'Ограничение: качество модели подтверждено только внутри доступного архива.',14,GRAY)
-    for idx in [5,6,7,8]:
-        s=copy_slide(deck,original.slides[idx])
-        # Preserve the author's original benchmark designs and measured values.
-        for sh in s.shapes:
-            if sh.has_text_frame and sh.text.startswith('0') and '—' in sh.text:
-                sh.text='ПРИЛОЖЕНИЕ · ИСХОДНЫЕ ЗАМЕРЫ 26.09.2026'
-                for p in sh.text_frame.paragraphs:
-                    p.font.name='Arial';p.font.size=Pt(11);p.font.color.rgb=RGBColor.from_string(ORANGE)
-        text(s,.7,6.5,7.45,.20,'Иная машина и прежний снимок; показатели не измерены повторно.',9,ORANGE,True)
-        # Correct technical overstatement about memory mapping in the old slide.
-        for sh in s.shapes:
-            if sh.has_text_frame and 'ничего не загружает в pandas' in sh.text:
-                sh.text='DuckDB читает нужный столбец из Parquet и использует собственную память для выполнения запроса.'
-                for p in sh.text_frame.paragraphs:p.font.name='Arial';p.font.size=Pt(13)
-        nums=[sh for sh in s.shapes if sh.has_text_frame and sh.text in ['6','7','8','9','10'] and sh.left>Inches(11)]
-        for sh in nums:
-            old=sh.text;sh.text=str(len(deck.slides)) if old!='10' else '21'
-            for p in sh.text_frame.paragraphs:p.font.size=Pt(13);p.font.name='Arial'
-    assert len(deck.slides)==21
-    deck.save(ROOT/'presentation.pptx')
+    from src.presentation import make_presentation as build
+    return build(q,m,eda,checks)
 
 
 def main():
