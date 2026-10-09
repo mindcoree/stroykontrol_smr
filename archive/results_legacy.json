@@ -1,0 +1,126 @@
+{
+  "generated_at": "26.09.2026 12:17",
+  "project": "Автоматизация строительного контроля и управления качеством СМР",
+  "team": "Медиханов Тимур",
+  "dataset": {
+    "name": "Chicago Building Violations",
+    "rows": 2030101,
+    "cols": 26,
+    "date_from": "01.01.2006",
+    "date_to": "25.09.2026",
+    "objects": 155704,
+    "violation_types": 1574,
+    "inspections": 470061,
+    "status_share": {
+      "FAILED": 0.6824,
+      "PASSED": 0.1916,
+      "CLOSED": 0.1259,
+      "HOLD": 0.0001,
+      "UNKNOWN": 0.0
+    }
+  },
+  "sizes": {
+    "csv_mb": 930.39,
+    "parquet_mb": 149.29,
+    "ratio": 6.23
+  },
+  "pandas": {
+    "mode": "full",
+    "csv_read_s": 15.25,
+    "parquet_read_s": 1.581,
+    "speedup": 9.64,
+    "csv_runs": [
+      26.581,
+      15.25,
+      13.526
+    ],
+    "parquet_runs": [
+      2.406,
+      1.057,
+      0.892,
+      1.865,
+      1.581
+    ],
+    "est_gb": 1.13,
+    "avail_gb": 7.24,
+    "df_mem_gb": 1.18,
+    "groupby_s": 0.04663
+  },
+  "duckdb": {
+    "agg_parquet_s": 0.0116,
+    "agg_csv_s": 0.979,
+    "q2_pandas_s": 0.316,
+    "q2_duckdb_s": 0.0406
+  },
+  "machine": {
+    "ram_total_gb": 8.4,
+    "ram_available_gb": 7.6,
+    "cpu": 2,
+    "os": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39",
+    "python": "3.11.15",
+    "pandas": "3.0.6",
+    "duckdb": "1.5.5"
+  },
+  "verdict": "Датасет занимает 0,93 ГБ в CSV (2 030 101 запись). В Parquet тот же набор весит 149 МБ, в 6,2 раза меньше, и читается в pandas за 1,6 с против 15,2 с у CSV. По памяти: полная таблица занимает в pandas 1,2 ГБ при 7,2 ГБ свободной памяти, для предобработки pandas достаточно. Агрегация в DuckDB прямо по Parquet занимает 11,6 мс, сводный запрос по годам и службам выполняется в 7,8 раза быстрее, чем в pandas. Данные помещаются на одну машину с 8,4 ГБ памяти, обработка разовая, поэтому Spark избыточен: Parquet — для хранения, DuckDB — для агрегаций, pandas — для предобработки.",
+  "raw": {
+    "csv_mb": 930.39,
+    "parquet_mb": 149.29,
+    "convert_s": 7.04,
+    "rows": 2030101,
+    "cols": 26,
+    "dup_id": 0,
+    "dup_full": 0,
+    "csv_opts": "header=true, all_varchar=true",
+    "missing_top_pct": {
+      "ssa": 80.58,
+      "violation_status_date": 57.48,
+      "violation_location": 50.76,
+      "violation_inspector_comments": 9.4,
+      "violation_ordinance": 2.91,
+      "street_type": 0.79
+    }
+  },
+  "prep": {
+    "rows_raw": 2030101,
+    "rows_clean": 2030085,
+    "rows_processed": 470057,
+    "dup_full": 0,
+    "dup_id": 0,
+    "bad_dates": 0,
+    "bad_status_dates": 0,
+    "bad_coords": 2020,
+    "mem_raw_mb": 479.8,
+    "mem_before_mb": 97.9,
+    "mem_after_mb": 52.7,
+    "processed_mb": 16.03,
+    "status_share": {
+      "FAILED": 0.6284,
+      "PASSED": 0.2167,
+      "CLOSED": 0.1548,
+      "HOLD": 0.0001
+    }
+  },
+  "features": {
+    "rows": 470057,
+    "n_features": 15,
+    "features": [
+      "department_bureau",
+      "inspection_category",
+      "inspection_waived",
+      "year",
+      "month",
+      "dayofweek",
+      "heating_season",
+      "latitude",
+      "longitude",
+      "obj_prev_inspections",
+      "obj_prev_fail_rate",
+      "obj_days_since_prev",
+      "obj_is_new",
+      "insp_prev_inspections",
+      "insp_prev_fail_rate"
+    ],
+    "target_failed_share": 0.6284,
+    "features_mb": 9.87
+  }
+}

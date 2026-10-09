@@ -1,0 +1,10 @@
+{
+  "url": "https://data.cityofchicago.org/api/views/22u3-xenr/rows.csv?accessType=DOWNLOAD",
+  "dataset_id": "22u3-xenr",
+  "retrieved_at": "2026-10-09T16:48:53.994542+05:00",
+  "rows_updated_at_unix": 1791528815,
+  "sha256": "fd1c8de7cc2638a0464a190b65eb0461a829094f13742b080fecc50b4ff5fb42",
+  "csv_bytes": 931341834,
+  "analysis_cutoff": "2026-10-09",
+  "note": "Live archive; local checksum identifies the analyzed snapshot."
+}

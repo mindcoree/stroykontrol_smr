@@ -1,0 +1,150 @@
+{
+  "features": [
+    "department_bureau",
+    "inspection_category",
+    "year",
+    "month_sin",
+    "month_cos",
+    "dayofweek",
+    "latitude",
+    "longitude"
+  ],
+  "splits": {
+    "train": {
+      "n": 328294,
+      "failed_share": 0.7302813941162495,
+      "date_from": "2006-01-01",
+      "date_to": "2023-12-31"
+    },
+    "validation": {
+      "n": 10594,
+      "failed_share": 0.7694921653766282,
+      "date_from": "2024-01-01",
+      "date_to": "2024-12-31"
+    },
+    "test": {
+      "n": 10910,
+      "failed_share": 0.7938588450962419,
+      "date_from": "2025-01-01",
+      "date_to": "2025-12-31"
+    }
+  },
+  "excluded_2026": 7965,
+  "thresholds": {
+    "Dummy prior": 0.0,
+    "Logistic regression": 0.23500000000000001
+  },
+  "fn_cost": 5,
+  "fp_cost": 1,
+  "metrics": [
+    {
+      "model": "Dummy prior",
+      "split": "validation",
+      "n": 10594,
+      "prevalence": 0.7694921653766282,
+      "threshold": 0.0,
+      "accuracy": 0.7694921653766282,
+      "balanced_accuracy": 0.5,
+      "precision": 0.7694921653766282,
+      "recall": 1.0,
+      "f1": 0.8697322095380348,
+      "roc_auc": 0.5,
+      "average_precision": 0.7694921653766282,
+      "brier": 0.17891145738344977,
+      "cost_per_inspection": 0.2305078346233717,
+      "tn": 0,
+      "fp": 2442,
+      "fn": 0,
+      "tp": 8152,
+      "fit_seconds": 0.011839416999919194
+    },
+    {
+      "model": "Dummy prior",
+      "split": "test",
+      "n": 10910,
+      "prevalence": 0.7938588450962419,
+      "threshold": 0.0,
+      "accuracy": 0.7938588450962419,
+      "balanced_accuracy": 0.5,
+      "precision": 0.7938588450962419,
+      "recall": 1.0,
+      "f1": 0.8850850748556538,
+      "roc_auc": 0.5,
+      "average_precision": 0.7938588450962419,
+      "brier": 0.1676890714318162,
+      "cost_per_inspection": 0.20614115490375803,
+      "tn": 0,
+      "fp": 2249,
+      "fn": 0,
+      "tp": 8661,
+      "fit_seconds": 0.011839416999919194
+    },
+    {
+      "model": "Logistic regression",
+      "split": "validation",
+      "n": 10594,
+      "prevalence": 0.7694921653766282,
+      "threshold": 0.23500000000000001,
+      "accuracy": 0.8065886350764584,
+      "balanced_accuracy": 0.580610246029775,
+      "precision": 0.7991959996078047,
+      "recall": 0.9998773307163886,
+      "f1": 0.8883439594572503,
+      "roc_auc": 0.82865765946605,
+      "average_precision": 0.9253165773131621,
+      "brier": 0.119519033201051,
+      "cost_per_inspection": 0.19378893713422693,
+      "tn": 394,
+      "fp": 2048,
+      "fn": 1,
+      "tp": 8151,
+      "fit_seconds": 1.3539769160001924
+    },
+    {
+      "model": "Logistic regression",
+      "split": "test",
+      "n": 10910,
+      "prevalence": 0.7938588450962419,
+      "threshold": 0.23500000000000001,
+      "accuracy": 0.8177818515123739,
+      "balanced_accuracy": 0.5613176087857288,
+      "precision": 0.8144971250824772,
+      "recall": 0.99769079782935,
+      "f1": 0.8968344577062792,
+      "roc_auc": 0.8103527673385377,
+      "average_precision": 0.9284559858493759,
+      "brier": 0.1194761892614839,
+      "cost_per_inspection": 0.18955087076076993,
+      "tn": 281,
+      "fp": 1968,
+      "fn": 20,
+      "tp": 8641,
+      "fit_seconds": 1.3539769160001924
+    }
+  ],
+  "confusion_matrices_test": {
+    "Dummy prior": [
+      [
+        0,
+        2249
+      ],
+      [
+        0,
+        8661
+      ]
+    ],
+    "Logistic regression": [
+      [
+        281,
+        1968
+      ],
+      [
+        20,
+        8641
+      ]
+    ]
+  },
+  "success_criterion_met": true,
+  "test_objects_seen_in_train_share": 0.6693176579068695,
+  "evaluation_protocol": "Frozen models fitted on <=2023; threshold chosen on 2024 only; evaluated on 2025. No refitting on validation. Historical snapshot lacks point-in-time field versions."
+}

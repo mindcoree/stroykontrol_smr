@@ -1,0 +1,20 @@
+{
+  "rows_raw": 2030101,
+  "rows_clean": 2030085,
+  "rows_processed": 470057,
+  "dup_full": 0,
+  "dup_id": 0,
+  "bad_dates": 0,
+  "bad_status_dates": 0,
+  "bad_coords": 2020,
+  "mem_raw_mb": 479.8,
+  "mem_before_mb": 97.9,
+  "mem_after_mb": 52.7,
+  "processed_mb": 16.03,
+  "status_share": {
+    "FAILED": 0.6284,
+    "PASSED": 0.2167,
+    "CLOSED": 0.1548,
+    "HOLD": 0.0001
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "rows": 470057,
+  "n_features": 15,
+  "features": [
+    "department_bureau",
+    "inspection_category",
+    "inspection_waived",
+    "year",
+    "month",
+    "dayofweek",
+    "heating_season",
+    "latitude",
+    "longitude",
+    "obj_prev_inspections",
+    "obj_prev_fail_rate",
+    "obj_days_since_prev",
+    "obj_is_new",
+    "insp_prev_inspections",
+    "insp_prev_fail_rate"
+  ],
+  "target_failed_share": 0.6284,
+  "features_mb": 9.87
+}

@@ -1,0 +1,50 @@
+{
+  "rows": 2032070,
+  "columns": 26,
+  "duplicate_ids": 0,
+  "duplicate_rows": 0,
+  "bad_dates": 0,
+  "reversed_status_dates": 0,
+  "missing_coordinates": 2020,
+  "outside_coordinates": 0,
+  "missing_keys": 0,
+  "date_min": "2006-01-01 00:00:00",
+  "date_max": "2026-10-08 00:00:00",
+  "objects": 155788,
+  "inspection_ids": 470576,
+  "violation_types": 1574,
+  "ambiguous_inspections": 41744,
+  "missing_inspection_status": 4,
+  "inspection_conflict_counts": {
+    "status_variants": 0,
+    "object_variants": 0,
+    "bureau_variants": 0,
+    "category_variants": 0,
+    "date_variants": 41744
+  },
+  "date_parse_failures": {
+    "violation_last_modified_date": 0,
+    "violation_date": 0,
+    "violation_status_date": 0
+  },
+  "raw_status_counts": {
+    "FAILED": 1386783,
+    "PASSED": 389427,
+    "CLOSED": 255674,
+    "HOLD": 170,
+    "UNKNOWN": 16
+  },
+  "inspection_status_counts": {
+    "FAILED": 295696,
+    "PASSED": 101987,
+    "CLOSED": 72828,
+    "HOLD": 61,
+    "UNKNOWN": 4
+  },
+  "aggregated_inspections": 470576,
+  "labeled_inspections": 357763,
+  "failed_share": 0.7365127193141828,
+  "csv_mb": 931.341834,
+  "parquet_mb": 94.651992,
+  "convert_seconds": 2.0700814589999936
+}

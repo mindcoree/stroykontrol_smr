@@ -1,0 +1,2607 @@
+{
+  "id": "22u3-xenr",
+  "name": "Building Violations",
+  "assetType": "dataset",
+  "attribution": "City of Chicago",
+  "attributionLink": "http://www.cityofchicago.org",
+  "averageRating": 0,
+  "category": "Buildings",
+  "createdAt": 1340731739,
+  "description": "Violations issued by the Department of Buildings from 2006 to the present.  Lenders and title companies, please note: These data are historical in nature and should not be relied upon for real estate transactions. For transactional purposes such as closings, please consult the title commitment for outstanding enforcement actions in the Circuit Court of Cook County or the Chicago Department of Administrative Hearings. Violations are always associated to an inspection and there can be multiple violation records to one inspection record. Related Applications: Building Data Warehouse http://www.cityofchicago.org/city/en/depts/bldgs/provdrs/inspect/svcs/building_violationsonline.html. The information presented on this website is informational only and does not necessarily reflect the current condition of the building or property. The dataset contains cases where a respondent has been found to be liable as well as cases where the respondent has been found to be not liable.",
+  "diciBackend": false,
+  "displayType": "table",
+  "downloadCount": 61491,
+  "hideFromCatalog": false,
+  "hideFromDataJson": false,
+  "indexUpdatedAt": 1555482978,
+  "locked": false,
+  "newBackend": true,
+  "numberOfComments": 0,
+  "oid": 27695425,
+  "provenance": "official",
+  "publicationAppendEnabled": false,
+  "publicationDate": 1516985039,
+  "publicationGroup": 368396,
+  "publicationStage": "published",
+  "rowIdentifierColumnId": 339325551,
+  "rowsUpdatedAt": 1791528815,
+  "rowsUpdatedBy": "n9j5-zhen",
+  "tableId": 14778651,
+  "totalTimesRated": 0,
+  "viewCount": 373292,
+  "viewLastModified": 1672934121,
+  "viewType": "tabular",
+  "approvals": [
+    {
+      "reviewedAt": 1516985039,
+      "reviewedAutomatically": true,
+      "state": "approved",
+      "submissionId": 949271,
+      "submissionObject": "public_audience_request",
+      "submissionOutcome": "change_audience",
+      "submittedAt": 1516985039,
+      "targetAudience": "public",
+      "workflowId": 2226,
+      "submissionDetails": {
+        "permissionType": "READ"
+      },
+      "submissionOutcomeApplication": {
+        "failureCount": 0,
+        "status": "success"
+      },
+      "submitter": {
+        "id": "scy9-9wg4",
+        "displayName": "cocadmin"
+      }
+    }
+  ],
+  "clientContext": {
+    "clientContextVariables": [],
+    "inheritedVariables": {}
+  },
+  "columns": [
+    {
+      "id": 339325551,
+      "name": "ID",
+      "dataTypeName": "text",
+      "fieldName": "id",
+      "position": 1,
+      "renderTypeName": "text",
+      "tableColumnId": 3282044,
+      "width": 95,
+      "cachedContents": {
+        "largest": "999665",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "1001847",
+            "count": "1"
+          },
+          {
+            "item": "1002009",
+            "count": "1"
+          },
+          {
+            "item": "1002038",
+            "count": "1"
+          },
+          {
+            "item": "1002039",
+            "count": "1"
+          },
+          {
+            "item": "1002040",
+            "count": "1"
+          },
+          {
+            "item": "1002042",
+            "count": "1"
+          },
+          {
+            "item": "1002044",
+            "count": "1"
+          },
+          {
+            "item": "1002047",
+            "count": "1"
+          },
+          {
+            "item": "1002048",
+            "count": "1"
+          },
+          {
+            "item": "1003969",
+            "count": "1"
+          },
+          {
+            "item": "1003970",
+            "count": "1"
+          },
+          {
+            "item": "1007960",
+            "count": "1"
+          },
+          {
+            "item": "1007961",
+            "count": "1"
+          },
+          {
+            "item": "1007963",
+            "count": "1"
+          },
+          {
+            "item": "1007964",
+            "count": "1"
+          },
+          {
+            "item": "1007967",
+            "count": "1"
+          },
+          {
+            "item": "1011895",
+            "count": "1"
+          },
+          {
+            "item": "1011897",
+            "count": "1"
+          },
+          {
+            "item": "1011898",
+            "count": "1"
+          },
+          {
+            "item": "1013455",
+            "count": "1"
+          }
+        ],
+        "smallest": "1001846",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "1961137"
+      },
+      "format": {
+        "align": "right",
+        "aggregate": "count"
+      }
+    },
+    {
+      "id": 339325552,
+      "name": "VIOLATION LAST MODIFIED DATE",
+      "dataTypeName": "calendar_date",
+      "fieldName": "violation_last_modified_date",
+      "position": 2,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 3282045,
+      "width": 291,
+      "cachedContents": {
+        "largest": "2025-06-03T16:30:10.000",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "2016-05-17T00:00:00.000",
+            "count": "5395"
+          },
+          {
+            "item": "2009-08-17T13:15:31.000",
+            "count": "688"
+          },
+          {
+            "item": "2008-11-18T16:48:49.000",
+            "count": "150"
+          },
+          {
+            "item": "2019-07-03T15:01:59.000",
+            "count": "116"
+          },
+          {
+            "item": "2017-05-08T17:18:45.000",
+            "count": "100"
+          },
+          {
+            "item": "2023-02-17T10:35:56.000",
+            "count": "85"
+          },
+          {
+            "item": "2014-03-24T09:36:12.000",
+            "count": "82"
+          },
+          {
+            "item": "2015-12-08T15:51:42.000",
+            "count": "82"
+          },
+          {
+            "item": "2015-03-06T13:36:41.000",
+            "count": "80"
+          },
+          {
+            "item": "2014-02-28T14:59:53.000",
+            "count": "80"
+          },
+          {
+            "item": "2016-01-27T13:28:03.000",
+            "count": "72"
+          },
+          {
+            "item": "2020-04-30T06:44:22.000",
+            "count": "72"
+          },
+          {
+            "item": "2023-11-30T15:18:30.000",
+            "count": "71"
+          },
+          {
+            "item": "2012-11-02T12:20:24.000",
+            "count": "69"
+          },
+          {
+            "item": "2012-05-14T11:49:49.000",
+            "count": "67"
+          },
+          {
+            "item": "2022-09-29T11:47:41.000",
+            "count": "65"
+          },
+          {
+            "item": "2018-09-18T10:57:55.000",
+            "count": "64"
+          },
+          {
+            "item": "2020-04-27T14:19:24.000",
+            "count": "64"
+          },
+          {
+            "item": "2019-07-24T14:59:15.000",
+            "count": "63"
+          },
+          {
+            "item": "2022-06-28T11:31:01.000",
+            "count": "62"
+          }
+        ],
+        "smallest": "2002-10-31T18:25:24.000",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "1129393"
+      },
+      "format": {
+        "view": "date",
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325553,
+      "name": "VIOLATION DATE",
+      "dataTypeName": "calendar_date",
+      "description": "The date the violation was cited.",
+      "fieldName": "violation_date",
+      "position": 3,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 3282046,
+      "width": 187,
+      "cachedContents": {
+        "largest": "2025-06-03T00:00:00.000",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "2006-03-24T00:00:00.000",
+            "count": "1721"
+          },
+          {
+            "item": "2006-06-20T00:00:00.000",
+            "count": "1574"
+          },
+          {
+            "item": "2006-03-10T00:00:00.000",
+            "count": "1403"
+          },
+          {
+            "item": "2006-01-02T00:00:00.000",
+            "count": "1297"
+          },
+          {
+            "item": "2006-03-28T00:00:00.000",
+            "count": "1254"
+          },
+          {
+            "item": "2006-06-01T00:00:00.000",
+            "count": "1222"
+          },
+          {
+            "item": "2006-05-31T00:00:00.000",
+            "count": "1220"
+          },
+          {
+            "item": "2006-03-29T00:00:00.000",
+            "count": "1163"
+          },
+          {
+            "item": "2006-05-05T00:00:00.000",
+            "count": "1132"
+          },
+          {
+            "item": "2006-04-26T00:00:00.000",
+            "count": "1117"
+          },
+          {
+            "item": "2006-05-10T00:00:00.000",
+            "count": "1098"
+          },
+          {
+            "item": "2006-03-27T00:00:00.000",
+            "count": "1069"
+          },
+          {
+            "item": "2006-05-09T00:00:00.000",
+            "count": "1049"
+          },
+          {
+            "item": "2006-03-16T00:00:00.000",
+            "count": "1039"
+          },
+          {
+            "item": "2006-08-29T00:00:00.000",
+            "count": "1037"
+          },
+          {
+            "item": "2007-01-05T00:00:00.000",
+            "count": "1013"
+          },
+          {
+            "item": "2007-03-27T00:00:00.000",
+            "count": "1008"
+          },
+          {
+            "item": "2006-04-06T00:00:00.000",
+            "count": "1001"
+          },
+          {
+            "item": "2009-03-30T00:00:00.000",
+            "count": "992"
+          },
+          {
+            "item": "2007-01-02T00:00:00.000",
+            "count": "991"
+          }
+        ],
+        "smallest": "2006-01-01T00:00:00.000",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "6245"
+      },
+      "format": {
+        "view": "date",
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325554,
+      "name": "VIOLATION CODE",
+      "dataTypeName": "text",
+      "description": "The Violation Code. See Violation Description for the description of what the code means.",
+      "fieldName": "violation_code",
+      "position": 4,
+      "renderTypeName": "text",
+      "tableColumnId": 3282047,
+      "width": 204,
+      "cachedContents": {
+        "largest": "ZSP2175",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "CN190019",
+            "count": "105152"
+          },
+          {
+            "item": "EV1110",
+            "count": "69058"
+          },
+          {
+            "item": "CN061014",
+            "count": "63513"
+          },
+          {
+            "item": "CN196029",
+            "count": "57842"
+          },
+          {
+            "item": "CN070024",
+            "count": "50530"
+          },
+          {
+            "item": "EV1111",
+            "count": "39137"
+          },
+          {
+            "item": "CN104015",
+            "count": "39066"
+          },
+          {
+            "item": "CN070014",
+            "count": "37658"
+          },
+          {
+            "item": "CN193110",
+            "count": "36304"
+          },
+          {
+            "item": "CN197019",
+            "count": "35567"
+          },
+          {
+            "item": "NC2011",
+            "count": "34641"
+          },
+          {
+            "item": "CN138106",
+            "count": "31438"
+          },
+          {
+            "item": "CN198019",
+            "count": "26720"
+          },
+          {
+            "item": "CN197087",
+            "count": "26590"
+          },
+          {
+            "item": "CN138056",
+            "count": "26338"
+          },
+          {
+            "item": "CN101015",
+            "count": "23593"
+          },
+          {
+            "item": "CN073014",
+            "count": "23484"
+          },
+          {
+            "item": "CN015062",
+            "count": "23013"
+          },
+          {
+            "item": "CN062024",
+            "count": "22829"
+          },
+          {
+            "item": "CN079014",
+            "count": "21705"
+          }
+        ],
+        "smallest": "002011",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "1568"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325555,
+      "name": "VIOLATION STATUS",
+      "dataTypeName": "text",
+      "description": "Complied = Violations have been addressed;\nOpen = Violations are open;\nNo Entry = Inspector could not gain access to the premise to conduct an inspection.",
+      "fieldName": "violation_status",
+      "position": 5,
+      "renderTypeName": "text",
+      "tableColumnId": 3282048,
+      "width": 203,
+      "cachedContents": {
+        "largest": "OPEN",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "OPEN",
+            "count": "1134663"
+          },
+          {
+            "item": "COMPLIED",
+            "count": "819638"
+          },
+          {
+            "item": "NO ENTRY",
+            "count": "6836"
+          }
+        ],
+        "smallest": "COMPLIED",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "3"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325556,
+      "name": "VIOLATION STATUS DATE",
+      "dataTypeName": "calendar_date",
+      "fieldName": "violation_status_date",
+      "position": 6,
+      "renderTypeName": "calendar_date",
+      "tableColumnId": 3282049,
+      "width": 240,
+      "cachedContents": {
+        "largest": "2025-06-03T00:00:00.000",
+        "non_null": "820051",
+        "null": "1141086",
+        "top": [
+          {
+            "item": "2015-04-02T00:00:00.000",
+            "count": "836"
+          },
+          {
+            "item": "2015-04-01T00:00:00.000",
+            "count": "742"
+          },
+          {
+            "item": "2015-03-23T00:00:00.000",
+            "count": "672"
+          },
+          {
+            "item": "2015-03-06T00:00:00.000",
+            "count": "636"
+          },
+          {
+            "item": "2015-03-24T00:00:00.000",
+            "count": "602"
+          },
+          {
+            "item": "2015-03-31T00:00:00.000",
+            "count": "598"
+          },
+          {
+            "item": "2015-03-25T00:00:00.000",
+            "count": "591"
+          },
+          {
+            "item": "2009-07-27T00:00:00.000",
+            "count": "568"
+          },
+          {
+            "item": "2018-12-12T00:00:00.000",
+            "count": "565"
+          },
+          {
+            "item": "2015-03-26T00:00:00.000",
+            "count": "564"
+          },
+          {
+            "item": "2018-12-18T00:00:00.000",
+            "count": "528"
+          },
+          {
+            "item": "2021-10-28T00:00:00.000",
+            "count": "525"
+          },
+          {
+            "item": "2020-02-19T00:00:00.000",
+            "count": "504"
+          },
+          {
+            "item": "2015-03-20T00:00:00.000",
+            "count": "483"
+          },
+          {
+            "item": "2015-03-19T00:00:00.000",
+            "count": "482"
+          },
+          {
+            "item": "2020-02-18T00:00:00.000",
+            "count": "476"
+          },
+          {
+            "item": "2016-11-01T00:00:00.000",
+            "count": "469"
+          },
+          {
+            "item": "2012-11-20T00:00:00.000",
+            "count": "469"
+          },
+          {
+            "item": "2018-07-18T00:00:00.000",
+            "count": "464"
+          },
+          {
+            "item": "2016-08-08T00:00:00.000",
+            "count": "452"
+          }
+        ],
+        "smallest": "2006-01-02T00:00:00.000",
+        "not_null": "641225",
+        "count": "1961137",
+        "cardinality": "5901"
+      },
+      "format": {
+        "view": "date",
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325557,
+      "name": "VIOLATION DESCRIPTION",
+      "dataTypeName": "text",
+      "description": "The description of the violation corresponding to the Violation Code value.",
+      "fieldName": "violation_description",
+      "position": 7,
+      "renderTypeName": "text",
+      "tableColumnId": 3282050,
+      "width": 352,
+      "cachedContents": {
+        "largest": "ZONING REQUIRES ADDTL REVIEW",
+        "non_null": "1947291",
+        "null": "13846",
+        "top": [
+          {
+            "item": "ARRANGE PREMISE INSPECTION",
+            "count": "105164"
+          },
+          {
+            "item": "MAINTAIN OR REPAIR ELECT ELEVA",
+            "count": "69058"
+          },
+          {
+            "item": "REPAIR EXTERIOR WALL",
+            "count": "63513"
+          },
+          {
+            "item": "POST OWNER/MANAGERS NAME/#",
+            "count": "57842"
+          },
+          {
+            "item": "REPAIR PORCH SYSTEM",
+            "count": "50530"
+          },
+          {
+            "item": "MAINTAIN OR REPAIR HYDRO ELEVA",
+            "count": "39137"
+          },
+          {
+            "item": "REPLCE WINDOW PANES, PLEXGLAS",
+            "count": "39066"
+          },
+          {
+            "item": "REPAIR EXTERIOR STAIR",
+            "count": "37658"
+          },
+          {
+            "item": "VACANT BUILDING - REGISTER",
+            "count": "36304"
+          },
+          {
+            "item": "INSTALL SMOKE DETECTORS",
+            "count": "35620"
+          },
+          {
+            "item": "PLANS & PERMITS REQ - CONTRCTR",
+            "count": "34641"
+          },
+          {
+            "item": "STOP/REMOVE NUISANCE",
+            "count": "31438"
+          },
+          {
+            "item": "FILE BLDG REGISTRATION",
+            "count": "26720"
+          },
+          {
+            "item": "CARB MONOX DETECT IN RESID",
+            "count": "26590"
+          },
+          {
+            "item": "DEBRIS, EXCESSIVE",
+            "count": "26338"
+          },
+          {
+            "item": "REPAIR INTERIOR WALLS/CEILING",
+            "count": "23593"
+          },
+          {
+            "item": "REPAIR EXTERIOR DOOR",
+            "count": "23484"
+          },
+          {
+            "item": "OBSTRUCTIONS IN EXIT WAY",
+            "count": "23013"
+          },
+          {
+            "item": "PARAPET",
+            "count": "22829"
+          },
+          {
+            "item": "REPAIR/REBUILD GARAGE OR SHED",
+            "count": "21705"
+          }
+        ],
+        "smallest": "100% RATED DEVICES",
+        "not_null": "1666062",
+        "count": "1961137",
+        "cardinality": "1398"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325558,
+      "name": "VIOLATION LOCATION",
+      "dataTypeName": "text",
+      "fieldName": "violation_location",
+      "position": 8,
+      "renderTypeName": "text",
+      "tableColumnId": 3282051,
+      "width": 316,
+      "cachedContents": {
+        "largest": "YOP OF WIC:A",
+        "non_null": "954855",
+        "null": "1006282",
+        "top": [
+          {
+            "item": "OTHER   :    :",
+            "count": "279747"
+          },
+          {
+            "item": "OTHER   :    :OTHER",
+            "count": "124699"
+          },
+          {
+            "item": "EXTERIOR:E   :",
+            "count": "28568"
+          },
+          {
+            "item": "EXTERIOR:W   :",
+            "count": "25958"
+          },
+          {
+            "item": "EXTERIOR:S   :",
+            "count": "22148"
+          },
+          {
+            "item": "EXTERIOR:N   :",
+            "count": "21810"
+          },
+          {
+            "item": "OTHER   :    :BUILDING",
+            "count": "21211"
+          },
+          {
+            "item": "INTERIOR:001 :",
+            "count": "17682"
+          },
+          {
+            "item": "OTHER   :    :BL00006",
+            "count": "17006"
+          },
+          {
+            "item": "INTERIOR:002 :",
+            "count": "11585"
+          },
+          {
+            "item": "OTHER   :    :OTHER BL00876",
+            "count": "9575"
+          },
+          {
+            "item": "INTERIOR:-1  :",
+            "count": "9422"
+          },
+          {
+            "item": "OTHER   :    :BUILDING,",
+            "count": "7464"
+          },
+          {
+            "item": "OTHER   :    :BL00876",
+            "count": "7426"
+          },
+          {
+            "item": "OTHER   :    :.",
+            "count": "7304"
+          },
+          {
+            "item": "OTHER   :    : BL01037",
+            "count": "6145"
+          },
+          {
+            "item": "OTHER   :    ::",
+            "count": "6095"
+          },
+          {
+            "item": "OTHER   :    :INTERIOR",
+            "count": "5088"
+          },
+          {
+            "item": "ROOF",
+            "count": "5049"
+          },
+          {
+            "item": "OTHER   :    :EXTERIOR",
+            "count": "4804"
+          }
+        ],
+        "smallest": "`",
+        "not_null": "781248",
+        "count": "1961137",
+        "cardinality": "61192"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325559,
+      "name": "VIOLATION INSPECTOR COMMENTS",
+      "dataTypeName": "text",
+      "fieldName": "violation_inspector_comments",
+      "position": 9,
+      "renderTypeName": "text",
+      "tableColumnId": 3282052,
+      "width": 436,
+      "cachedContents": {
+        "largest": "Z&V HOME IMPROVEMENT - TGC 029536 EXP. 7/26/11.  WORKING CONTRARY TO APPROVED PERMIT.PERMIT #100388504 ISSUED 04-07-11 - PSO FEES PAID",
+        "non_null": "1775567",
+        "null": "185570",
+        "top": [
+          {
+            "item": "VIOLATION CLOSED PER PCR 1180",
+            "count": "5395"
+          },
+          {
+            "item": "VIOLATIONS CLOSED WHEN INSPECTION IS CLOSED OR CANCELLED",
+            "count": "2330"
+          },
+          {
+            "item": "NO OWNER'S ID SIGN POSTED.",
+            "count": "2319"
+          },
+          {
+            "item": "NO OWNER I.D SIGN POSTED.",
+            "count": "2171"
+          },
+          {
+            "item": "POST OWNERSHIP ON BUILDING.",
+            "count": "1961"
+          },
+          {
+            "item": "NO ENTRY TO INTERIOR.",
+            "count": "1879"
+          },
+          {
+            "item": "ROOF",
+            "count": "1681"
+          },
+          {
+            "item": "BUILDING/ OWNERS ID SIGN- MISSING.",
+            "count": "1632"
+          },
+          {
+            "item": "INSPECTION",
+            "count": "1628"
+          },
+          {
+            "item": "BUILDING - NO OWNER'S I.D. SIGN POSTED.",
+            "count": "1577"
+          },
+          {
+            "item": "BUILDING - NO OWNER'S ID SIGN POSTED.",
+            "count": "1510"
+          },
+          {
+            "item": "BUILDING- NO OWNER'S ID SIGN POSTED.",
+            "count": "1466"
+          },
+          {
+            "item": "ENGINEER REPORT",
+            "count": "1398"
+          },
+          {
+            "item": "EXPOSED METAL LETTER",
+            "count": "1392"
+          },
+          {
+            "item": "STOP ALL WORK ON PREMISES UNTIL PLANS ARE APPROVED AND PERMIT IS OBTAINEDSECTION 12-080, 13-32-035.",
+            "count": "1321"
+          },
+          {
+            "item": "NO ENTRY TO INTERIOR",
+            "count": "1072"
+          },
+          {
+            "item": "NO ENTRY",
+            "count": "1069"
+          },
+          {
+            "item": "BASEMENT",
+            "count": "974"
+          },
+          {
+            "item": "PROTECT METAL MEMBERS",
+            "count": "973"
+          },
+          {
+            "item": "INTERIOR OF BUILDING- NO RESPONSE, UNVERIFIED DETECTORS, CONDITIONS, AND OCCUPANCY. UNABLE TO INSPECT INTERIOR STAIRWAYS.",
+            "count": "949"
+          }
+        ],
+        "smallest": "`",
+        "not_null": "1502093",
+        "count": "1961137",
+        "cardinality": "1257372"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325560,
+      "name": "VIOLATION ORDINANCE",
+      "dataTypeName": "text",
+      "fieldName": "violation_ordinance",
+      "position": 10,
+      "renderTypeName": "text",
+      "tableColumnId": 3282053,
+      "width": 328,
+      "cachedContents": {
+        "largest": "Zoning- Requires Additional Review (Routed) ---- A zoning review was conducted by a Plan Examiner within the Department of Zoning and Planning (DZP). Based on the application and documentation submitted your application will require a review by an additional discipline of Zoning. Your application has been routed to that respective area identified.",
+        "non_null": "1903723",
+        "null": "57414",
+        "top": [
+          {
+            "item": "Arrange for inspection of premises. (13-12-100)",
+            "count": "105152"
+          },
+          {
+            "item": "Failed to maintain electric elevator equipment provided at premises in safe and sound working condition. (13-196-590, 13-196-630(b), 18-30-001)",
+            "count": "69058"
+          },
+          {
+            "item": "Failed to maintain the exterior walls of a building or structure free from holes, breaks, loose or rotting boards or timbers and any other conditions which might admit rain or dampness to the walls.  (13-196-530(b), 13-196-641)",
+            "count": "63513"
+          },
+          {
+            "item": "Post name, address, and telephone of owner, owner's agent for managing, controlling or collecting rents, and any other person managing or controlling building conspicuously where accessible or visible to public way. (13-12-030)",
+            "count": "57842"
+          },
+          {
+            "item": "Failed to repair or replace defective or missing members of porch system.  (13-196-570, 13-196-641)",
+            "count": "50530"
+          },
+          {
+            "item": "Failed to maintain hydraulic elevator equipment provided at premises in safe and sound working condition. (13-196-590, 13-196-630(b), 18-30-001)",
+            "count": "39137"
+          },
+          {
+            "item": "Replace broken, missing or defective window panes. (13-196-550 A)",
+            "count": "39066"
+          },
+          {
+            "item": "Failed to maintain exterior stairways in safe condition and in sound repair.  (13-196-570, 13-196-641)",
+            "count": "37658"
+          },
+          {
+            "item": "Register vacant building within 30 days of it becoming vacant, or within 30 days after assuming ownership of an existing vacant building. (13-12-125(a)). Building must be kept in compliance with all vacant building requirements pursuant to 13-12-135. See Vacant Building Ordinance and registration form at https://ipiweb.cityofchicago.org/VBR",
+            "count": "36304"
+          },
+          {
+            "item": "Install and maintain approved smoke detectors. (13-196-100 thru 13-196-160) Install a smoke detector in every dwelling unit. Install one on any living level with a habitable room or unenclosed heating plant, on the uppermost ceiling of enclosed porch stairwell, and within 15 feet of every sleeping room. Be sure the detector is at least 4 inches from the wall, 4 to 12 inches from the ceiling, and not above door or window.",
+            "count": "35620"
+          },
+          {
+            "item": "Performed or allowed work to be performed without submitting plans prepared, signed and sealed by a licensed architect or registered structural engineer for approval and without obtaining a permit to perform the work.  (13-32-010, 13-32-040, 13-40-020, 13-12-050)",
+            "count": "34641"
+          },
+          {
+            "item": "Remove and stop nuisance. (7-28-060)",
+            "count": "31438"
+          },
+          {
+            "item": "File building registration statement with Building Dept. (13-10-030, 13-10-040)",
+            "count": "26720"
+          },
+          {
+            "item": "Install carbon monoxide detector within 40 feet of every sleeping room in residential structure. (13-64-190, 13-64-210) A carbon monoxide detector is needed whenever there is a heating appliance on the premises that burns fossil fuel such as gas, oil, or coal, or air that is circulated through a heat exchanger. Install according to manufacturer instructions. A hard wired model requires an electrical wiring permit. In a single family residence, be sure the detector is on or below the lowest floor with a place to sleep. In a multiple dwelling residence heated by a boiler, install a detector in the same room as the boiler. Otherwise, each apartment follows single family guidelines. The owner is responsible for installation and written instructions, the tenant for testing, maintenance, and batteries.",
+            "count": "26592"
+          },
+          {
+            "item": "Remove accumulation of refuse and debris and keep premises clean. (13-196-580, 13-196-630)",
+            "count": "26338"
+          },
+          {
+            "item": "Failed to maintain interior walls and ceilings free from holes or cracks.  (13-19-540(c))",
+            "count": "23593"
+          },
+          {
+            "item": "Failed to maintain exterior door in sound condition and repair.  (13-196-550(d) and (e), 13-196-641)",
+            "count": "23484"
+          },
+          {
+            "item": "Failed to remove obstruction from exitway that hampers travel and evacuation.  (13-160-070, 13-196-080)",
+            "count": "23013"
+          },
+          {
+            "item": "Failed to maintain parapet wall in good repair and free from cracks and defects.  (13-196-530 and 13-196-641)",
+            "count": "22829"
+          },
+          {
+            "item": "Failed to maintain garage in sound condition and repair.  (13-196-530, 13-196-641)",
+            "count": "21705"
+          }
+        ],
+        "smallest": "100 %  rated devices [ 14E-2-215.2]   See Drawing#.",
+        "not_null": "1629247",
+        "count": "1961137",
+        "cardinality": "1394"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325561,
+      "name": "INSPECTOR ID",
+      "dataTypeName": "text",
+      "fieldName": "inspector_id",
+      "position": 11,
+      "renderTypeName": "text",
+      "tableColumnId": 3282054,
+      "width": 171,
+      "cachedContents": {
+        "largest": "WEBAIC",
+        "non_null": "1960621",
+        "null": "0",
+        "top": [
+          {
+            "item": "BL00444",
+            "count": "78611"
+          },
+          {
+            "item": "BL01000",
+            "count": "71779"
+          },
+          {
+            "item": "BL00831",
+            "count": "62742"
+          },
+          {
+            "item": "BL00941",
+            "count": "55645"
+          },
+          {
+            "item": "BL00746",
+            "count": "48005"
+          },
+          {
+            "item": "BL01037",
+            "count": "47690"
+          },
+          {
+            "item": "BL00876",
+            "count": "47295"
+          },
+          {
+            "item": "BL00722",
+            "count": "43660"
+          },
+          {
+            "item": "BL00812",
+            "count": "41761"
+          },
+          {
+            "item": "BL01041",
+            "count": "36910"
+          },
+          {
+            "item": "BL01039",
+            "count": "34558"
+          },
+          {
+            "item": "BL01004",
+            "count": "33152"
+          },
+          {
+            "item": "BL00748",
+            "count": "32413"
+          },
+          {
+            "item": "87296",
+            "count": "31556"
+          },
+          {
+            "item": "196492",
+            "count": "29921"
+          },
+          {
+            "item": "371335",
+            "count": "29441"
+          },
+          {
+            "item": "BL00875",
+            "count": "28835"
+          },
+          {
+            "item": "BL01002",
+            "count": "26880"
+          },
+          {
+            "item": "BL00708",
+            "count": "24558"
+          },
+          {
+            "item": "BL00685",
+            "count": "23885"
+          }
+        ],
+        "smallest": "004131",
+        "not_null": "1676801",
+        "count": "1960621",
+        "cardinality": "406"
+      },
+      "format": {
+        "align": "right"
+      }
+    },
+    {
+      "id": 339325562,
+      "name": "INSPECTION NUMBER",
+      "dataTypeName": "number",
+      "fieldName": "inspection_number",
+      "position": 12,
+      "renderTypeName": "number",
+      "tableColumnId": 3282055,
+      "width": 218,
+      "cachedContents": {
+        "largest": "14665152",
+        "non_null": "1961137",
+        "average": "7859113.040707611",
+        "null": "0",
+        "top": [
+          {
+            "item": "11247474",
+            "count": "538"
+          },
+          {
+            "item": "11587123",
+            "count": "209"
+          },
+          {
+            "item": "13555685",
+            "count": "164"
+          },
+          {
+            "item": "13250131",
+            "count": "141"
+          },
+          {
+            "item": "12964992",
+            "count": "135"
+          },
+          {
+            "item": "2323972",
+            "count": "123"
+          },
+          {
+            "item": "10669347",
+            "count": "123"
+          },
+          {
+            "item": "12955264",
+            "count": "120"
+          },
+          {
+            "item": "11376844",
+            "count": "106"
+          },
+          {
+            "item": "12253306",
+            "count": "104"
+          },
+          {
+            "item": "14316721",
+            "count": "103"
+          },
+          {
+            "item": "14170311",
+            "count": "94"
+          },
+          {
+            "item": "13532343",
+            "count": "94"
+          },
+          {
+            "item": "13580778",
+            "count": "88"
+          },
+          {
+            "item": "13807437",
+            "count": "88"
+          },
+          {
+            "item": "11764501",
+            "count": "86"
+          },
+          {
+            "item": "13539014",
+            "count": "83"
+          },
+          {
+            "item": "11041943",
+            "count": "82"
+          },
+          {
+            "item": "10668560",
+            "count": "82"
+          },
+          {
+            "item": "12283913",
+            "count": "81"
+          }
+        ],
+        "smallest": "265575",
+        "not_null": "1676801",
+        "count": "1961137",
+        "sum": "12681889194590",
+        "cardinality": "453090"
+      },
+      "format": {
+        "precisionStyle": "standard",
+        "noCommas": "true",
+        "align": "right"
+      }
+    },
+    {
+      "id": 339325563,
+      "name": "INSPECTION STATUS",
+      "dataTypeName": "text",
+      "fieldName": "inspection_status",
+      "position": 13,
+      "renderTypeName": "text",
+      "tableColumnId": 3282056,
+      "width": 210,
+      "cachedContents": {
+        "largest": "PASSED",
+        "non_null": "1961121",
+        "null": "16",
+        "top": [
+          {
+            "item": "FAILED",
+            "count": "1341805"
+          },
+          {
+            "item": "PASSED",
+            "count": "369448"
+          },
+          {
+            "item": "CLOSED",
+            "count": "249693"
+          },
+          {
+            "item": "HOLD",
+            "count": "175"
+          }
+        ],
+        "smallest": "CLOSED",
+        "not_null": "1676785",
+        "count": "1961137",
+        "cardinality": "4"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325564,
+      "name": "INSPECTION WAIVED",
+      "dataTypeName": "text",
+      "fieldName": "inspection_waived",
+      "position": 14,
+      "renderTypeName": "text",
+      "tableColumnId": 3282057,
+      "width": 210,
+      "cachedContents": {
+        "largest": "N",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "N",
+            "count": "1961137"
+          }
+        ],
+        "smallest": "N",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "1"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325565,
+      "name": "INSPECTION CATEGORY",
+      "dataTypeName": "text",
+      "description": "Inspections are categorized by one of the following: COMPLAINT – Inspection is a result of a 311 Complaint. PERIODIC – Inspection is a result of recurring inspection (typically on an annual cycle). PERMIT – Inspection is a result of a permit. REGISTRATION – Inspection is a result of a Registration (typically Vacant Building Registration).",
+      "fieldName": "inspection_category",
+      "position": 15,
+      "renderTypeName": "text",
+      "tableColumnId": 3282058,
+      "width": 234,
+      "cachedContents": {
+        "largest": "REGISTRATION",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "COMPLAINT",
+            "count": "1382438"
+          },
+          {
+            "item": "PERIODIC",
+            "count": "477222"
+          },
+          {
+            "item": "PERMIT",
+            "count": "98884"
+          },
+          {
+            "item": "REGISTRATION",
+            "count": "2593"
+          }
+        ],
+        "smallest": "COMPLAINT",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "4"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325566,
+      "name": "DEPARTMENT BUREAU",
+      "dataTypeName": "text",
+      "fieldName": "department_bureau",
+      "position": 16,
+      "renderTypeName": "text",
+      "tableColumnId": 3282059,
+      "width": 229,
+      "cachedContents": {
+        "largest": "WATER",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "CONSERVATION",
+            "count": "1287594"
+          },
+          {
+            "item": "SPECIAL TASK FORCE",
+            "count": "144898"
+          },
+          {
+            "item": "ELEVATOR",
+            "count": "126653"
+          },
+          {
+            "item": "DEMOLITION",
+            "count": "119822"
+          },
+          {
+            "item": "ELECTRICAL",
+            "count": "41671"
+          },
+          {
+            "item": "NEW CONSTRUCTION",
+            "count": "38055"
+          },
+          {
+            "item": "PLUMBING",
+            "count": "37899"
+          },
+          {
+            "item": "BOILER",
+            "count": "37664"
+          },
+          {
+            "item": "VENTILATION",
+            "count": "36460"
+          },
+          {
+            "item": "REFRIGERATION",
+            "count": "31330"
+          },
+          {
+            "item": "SPECIAL INSPECTION PROGRAM",
+            "count": "27787"
+          },
+          {
+            "item": "SIGNS",
+            "count": "15368"
+          },
+          {
+            "item": "IRON",
+            "count": "14596"
+          },
+          {
+            "item": "WATER",
+            "count": "761"
+          },
+          {
+            "item": "CONSTRUCTION EQUIPMENT",
+            "count": "579"
+          }
+        ],
+        "smallest": "BOILER",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "15"
+      },
+      "format": {
+        "align": "left"
+      }
+    },
+    {
+      "id": 339325567,
+      "name": "ADDRESS",
+      "dataTypeName": "text",
+      "fieldName": "address",
+      "position": 17,
+      "renderTypeName": "text",
+      "tableColumnId": 3282060,
+      "width": 184,
+      "cachedContents": {
+        "largest": "9 W WASHINGTON ST",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "1900 N AUSTIN AVE",
+            "count": "699"
+          },
+          {
+            "item": "11601 W TOUHY AVE",
+            "count": "642"
+          },
+          {
+            "item": "727 E 60TH ST",
+            "count": "373"
+          },
+          {
+            "item": "6425 S LOWE AVE",
+            "count": "372"
+          },
+          {
+            "item": "7200 S COLES AVE",
+            "count": "371"
+          },
+          {
+            "item": "2545 W FITCH AVE",
+            "count": "338"
+          },
+          {
+            "item": "233 S WACKER DR",
+            "count": "329"
+          },
+          {
+            "item": "5633 N ASHLAND AVE",
+            "count": "311"
+          },
+          {
+            "item": "5501 W WASHINGTON BLVD",
+            "count": "307"
+          },
+          {
+            "item": "20 N WACKER DR",
+            "count": "304"
+          },
+          {
+            "item": "7808 S SOUTH SHORE DR",
+            "count": "298"
+          },
+          {
+            "item": "4408 S DREXEL BLVD",
+            "count": "290"
+          },
+          {
+            "item": "6358 S DR MARTIN L KING JR DR",
+            "count": "287"
+          },
+          {
+            "item": "55 E WASHINGTON ST",
+            "count": "283"
+          },
+          {
+            "item": "404 W HARRISON ST",
+            "count": "282"
+          },
+          {
+            "item": "214 S HAMLIN BLVD",
+            "count": "277"
+          },
+          {
+            "item": "4300 W FORD CITY DR",
+            "count": "267"
+          },
+          {
+            "item": "1124 W WILSON AVE",
+            "count": "264"
+          },
+          {
+            "item": "7000 S PARNELL AVE",
+            "count": "263"
+          },
+          {
+            "item": "501 N CENTRAL AVE",
+            "count": "262"
+          }
+        ],
+        "smallest": "10000 N BESSIE COLEMAN DR",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "171403"
+      },
+      "format": {}
+    },
+    {
+      "id": 342323169,
+      "name": "STREET NUMBER",
+      "dataTypeName": "number",
+      "fieldName": "street_number",
+      "position": 18,
+      "renderTypeName": "number",
+      "tableColumnId": 60469701,
+      "width": 182,
+      "cachedContents": {
+        "largest": "13770",
+        "non_null": "1961137",
+        "average": "4147.323477027913",
+        "null": "0",
+        "top": [
+          {
+            "item": "400",
+            "count": "2101"
+          },
+          {
+            "item": "200",
+            "count": "2068"
+          },
+          {
+            "item": "500",
+            "count": "1913"
+          },
+          {
+            "item": "1",
+            "count": "1900"
+          },
+          {
+            "item": "600",
+            "count": "1811"
+          },
+          {
+            "item": "1000",
+            "count": "1796"
+          },
+          {
+            "item": "300",
+            "count": "1772"
+          },
+          {
+            "item": "901",
+            "count": "1714"
+          },
+          {
+            "item": "1900",
+            "count": "1642"
+          },
+          {
+            "item": "111",
+            "count": "1608"
+          },
+          {
+            "item": "100",
+            "count": "1608"
+          },
+          {
+            "item": "1500",
+            "count": "1571"
+          },
+          {
+            "item": "2100",
+            "count": "1561"
+          },
+          {
+            "item": "2701",
+            "count": "1550"
+          },
+          {
+            "item": "1400",
+            "count": "1523"
+          },
+          {
+            "item": "7801",
+            "count": "1438"
+          },
+          {
+            "item": "10",
+            "count": "1386"
+          },
+          {
+            "item": "2501",
+            "count": "1361"
+          },
+          {
+            "item": "401",
+            "count": "1322"
+          },
+          {
+            "item": "1300",
+            "count": "1318"
+          }
+        ],
+        "smallest": "1",
+        "not_null": "1676801",
+        "count": "1961137",
+        "sum": "6692345118",
+        "cardinality": "10076"
+      },
+      "format": {
+        "precisionStyle": "standard",
+        "noCommas": "true",
+        "precision": "0",
+        "align": "right"
+      }
+    },
+    {
+      "id": 342323174,
+      "name": "STREET DIRECTION",
+      "dataTypeName": "text",
+      "fieldName": "street_direction",
+      "position": 19,
+      "renderTypeName": "text",
+      "tableColumnId": 60469706,
+      "width": 198,
+      "cachedContents": {
+        "largest": "W",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "S",
+            "count": "808408"
+          },
+          {
+            "item": "W",
+            "count": "581271"
+          },
+          {
+            "item": "N",
+            "count": "449692"
+          },
+          {
+            "item": "E",
+            "count": "121766"
+          }
+        ],
+        "smallest": "E",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "4"
+      },
+      "format": {
+        "displayStyle": "plain",
+        "align": "left"
+      }
+    },
+    {
+      "id": 342323175,
+      "name": "STREET NAME",
+      "dataTypeName": "text",
+      "fieldName": "street_name",
+      "position": 20,
+      "renderTypeName": "text",
+      "tableColumnId": 60469707,
+      "width": 222,
+      "cachedContents": {
+        "largest": "ZEMKE",
+        "non_null": "1961137",
+        "null": "0",
+        "top": [
+          {
+            "item": "MICHIGAN",
+            "count": "21977"
+          },
+          {
+            "item": "ASHLAND",
+            "count": "19648"
+          },
+          {
+            "item": "WESTERN",
+            "count": "15768"
+          },
+          {
+            "item": "KEDZIE",
+            "count": "15141"
+          },
+          {
+            "item": "DR MARTIN L KING JR",
+            "count": "13956"
+          },
+          {
+            "item": "HALSTED",
+            "count": "13938"
+          },
+          {
+            "item": "INDIANA",
+            "count": "13178"
+          },
+          {
+            "item": "WABASH",
+            "count": "12922"
+          },
+          {
+            "item": "SHERIDAN",
+            "count": "12735"
+          },
+          {
+            "item": "CALIFORNIA",
+            "count": "12367"
+          },
+          {
+            "item": "CLARK",
+            "count": "12354"
+          },
+          {
+            "item": "PAULINA",
+            "count": "11971"
+          },
+          {
+            "item": "MILWAUKEE",
+            "count": "11660"
+          },
+          {
+            "item": "79TH",
+            "count": "11411"
+          },
+          {
+            "item": "DAMEN",
+            "count": "10999"
+          },
+          {
+            "item": "PULASKI",
+            "count": "10606"
+          },
+          {
+            "item": "JACKSON",
+            "count": "10279"
+          },
+          {
+            "item": "STATE",
+            "count": "10127"
+          },
+          {
+            "item": "CHICAGO",
+            "count": "10098"
+          },
+          {
+            "item": "NORTH",
+            "count": "10095"
+          }
+        ],
+        "smallest": "100TH",
+        "not_null": "1676801",
+        "count": "1961137",
+        "cardinality": "1201"
+      },
+      "format": {}
+    },
+    {
+      "id": 342323176,
+      "name": "STREET TYPE",
+      "dataTypeName": "text",
+      "fieldName": "street_type",
+      "position": 21,
+      "renderTypeName": "text",
+      "tableColumnId": 60469708,
+      "width": 160,
+      "cachedContents": {
+        "largest": "WAY",
+        "non_null": "1945683",
+        "null": "15454",
+        "top": [
+          {
+            "item": "AVE",
+            "count": "1089990"
+          },
+          {
+            "item": "ST",
+            "count": "616369"
+          },
+          {
+            "item": "BLVD",
+            "count": "70428"
+          },
+          {
+            "item": "PL",
+            "count": "67387"
+          },
+          {
+            "item": "RD",
+            "count": "49130"
+          },
+          {
+            "item": "DR",
+            "count": "35627"
+          },
+          {
+            "item": "PKWY",
+            "count": "7657"
+          },
+          {
+            "item": "CT",
+            "count": "3865"
+          },
+          {
+            "item": "TER",
+            "count": "2604"
+          },
+          {
+            "item": "HWY",
+            "count": "1770"
+          },
+          {
+            "item": "PLZ",
+            "count": "838"
+          },
+          {
+            "item": "WAY",
+            "count": "8"
+          },
+          {
+            "item": "EXPY",
+            "count": "7"
+          },
+          {
+            "item": "LN",
+            "count": "3"
+          }
+        ],
+        "smallest": "AVE",
+        "not_null": "1663282",
+        "count": "1961137",
+        "cardinality": "14"
+      },
+      "format": {}
+    },
+    {
+      "id": 339325568,
+      "name": "PROPERTY GROUP",
+      "dataTypeName": "number",
+      "description": "Properties (lots) in the City of Chicago can typically have multiple point addresses, range addresses and buildings. Examples are corner lots, large lots, lots with front and rear buildings, etc. As a result, inspections (and their associated violations), permits and complaints related to a single property could have different addresses. This problem can be reconciled by using Property Group. All point and range addresses for a property are assigned the same Property Group key.",
+      "fieldName": "property_group",
+      "position": 22,
+      "renderTypeName": "number",
+      "tableColumnId": 3282064,
+      "width": 193,
+      "cachedContents": {
+        "largest": "687997",
+        "non_null": "1961137",
+        "average": "201359.6357502910",
+        "null": "0",
+        "top": [
+          {
+            "item": "6124",
+            "count": "705"
+          },
+          {
+            "item": "21995",
+            "count": "642"
+          },
+          {
+            "item": "20890",
+            "count": "496"
+          },
+          {
+            "item": "654907",
+            "count": "390"
+          },
+          {
+            "item": "19382",
+            "count": "373"
+          },
+          {
+            "item": "19692",
+            "count": "372"
+          },
+          {
+            "item": "20386",
+            "count": "371"
+          },
+          {
+            "item": "25993",
+            "count": "360"
+          },
+          {
+            "item": "14848",
+            "count": "357"
+          },
+          {
+            "item": "12474",
+            "count": "352"
+          },
+          {
+            "item": "13851",
+            "count": "344"
+          },
+          {
+            "item": "20787",
+            "count": "343"
+          },
+          {
+            "item": "2991",
+            "count": "341"
+          },
+          {
+            "item": "14567",
+            "count": "317"
+          },
+          {
+            "item": "664376",
+            "count": "314"
+          },
+          {
+            "item": "21671",
+            "count": "310"
+          },
+          {
+            "item": "20834",
+            "count": "308"
+          },
+          {
+            "item": "20660",
+            "count": "307"
+          },
+          {
+            "item": "1635",
+            "count": "307"
+          },
+          {
+            "item": "1655",
+            "count": "306"
+          }
+        ],
+        "smallest": "1000",
+        "not_null": "1676801",
+        "count": "1961137",
+        "sum": "324924781667",
+        "cardinality": "152805"
+      },
+      "format": {
+        "precisionStyle": "standard",
+        "noCommas": "true",
+        "align": "right"
+      }
+    },
+    {
+      "id": 339325569,
+      "name": "SSA",
+      "dataTypeName": "text",
+      "description": "Special Service Areas are local tax districts that fund expanded services and programs, to foster commercial and economic development, through a localized property tax. In other cities these areas are sometimes called Business Improvement Districts (BIDs). This portal contains a map of all Chicago SSAs",
+      "fieldName": "ssa",
+      "position": 23,
+      "renderTypeName": "text",
+      "tableColumnId": 18083784,
+      "width": 130,
+      "cachedContents": {
+        "largest": "8",
+        "non_null": "379588",
+        "null": "1581549",
+        "top": [
+          {
+            "item": "51",
+            "count": "27618"
+          },
+          {
+            "item": "49",
+            "count": "22150"
+          },
+          {
+            "item": "3",
+            "count": "19978"
+          },
+          {
+            "item": "33",
+            "count": "18923"
+          },
+          {
+            "item": "34",
+            "count": "18565"
+          },
+          {
+            "item": "42",
+            "count": "15679"
+          },
+          {
+            "item": "14",
+            "count": "14349"
+          },
+          {
+            "item": "50",
+            "count": "12791"
+          },
+          {
+            "item": "60",
+            "count": "11457"
+          },
+          {
+            "item": "43",
+            "count": "11163"
+          },
+          {
+            "item": "8",
+            "count": "10836"
+          },
+          {
+            "item": "32",
+            "count": "10514"
+          },
+          {
+            "item": "26",
+            "count": "9636"
+          },
+          {
+            "item": "25",
+            "count": "9305"
+          },
+          {
+            "item": "29",
+            "count": "9264"
+          },
+          {
+            "item": "24",
+            "count": "9140"
+          },
+          {
+            "item": "47",
+            "count": "8577"
+          },
+          {
+            "item": "63",
+            "count": "8364"
+          },
+          {
+            "item": "17",
+            "count": "7607"
+          },
+          {
+            "item": "5",
+            "count": "7422"
+          }
+        ],
+        "smallest": "1",
+        "not_null": "321439",
+        "count": "1961137",
+        "cardinality": "53"
+      },
+      "format": {}
+    },
+    {
+      "id": 339325570,
+      "name": "LATITUDE",
+      "dataTypeName": "number",
+      "fieldName": "latitude",
+      "position": 24,
+      "renderTypeName": "number",
+      "tableColumnId": 3282061,
+      "width": 196,
+      "cachedContents": {
+        "largest": "42.02268599",
+        "non_null": "1959170",
+        "average": "41.84603748636337",
+        "null": "1967",
+        "top": [
+          {
+            "item": "41.914820427",
+            "count": "699"
+          },
+          {
+            "item": "42.008536401",
+            "count": "642"
+          },
+          {
+            "item": "41.785741744",
+            "count": "373"
+          },
+          {
+            "item": "41.7772212",
+            "count": "372"
+          },
+          {
+            "item": "41.76505513",
+            "count": "371"
+          },
+          {
+            "item": "42.011175415",
+            "count": "338"
+          },
+          {
+            "item": "41.878560154",
+            "count": "329"
+          },
+          {
+            "item": "41.984536193",
+            "count": "311"
+          },
+          {
+            "item": "41.882155685",
+            "count": "307"
+          },
+          {
+            "item": "41.882410906",
+            "count": "304"
+          },
+          {
+            "item": "41.754774913",
+            "count": "298"
+          },
+          {
+            "item": "41.814699182",
+            "count": "290"
+          },
+          {
+            "item": "41.778666416",
+            "count": "287"
+          },
+          {
+            "item": "41.883111687",
+            "count": "283"
+          },
+          {
+            "item": "41.874532249",
+            "count": "282"
+          },
+          {
+            "item": "41.8775278",
+            "count": "277"
+          },
+          {
+            "item": "41.753318741",
+            "count": "267"
+          },
+          {
+            "item": "41.965496029",
+            "count": "264"
+          },
+          {
+            "item": "41.767016606",
+            "count": "263"
+          },
+          {
+            "item": "41.889383638",
+            "count": "262"
+          }
+        ],
+        "smallest": "41.644670132",
+        "not_null": "1675294",
+        "count": "1961137",
+        "sum": "67463595.790990223",
+        "cardinality": "171092"
+      },
+      "format": {}
+    },
+    {
+      "id": 339325571,
+      "name": "LONGITUDE",
+      "dataTypeName": "number",
+      "fieldName": "longitude",
+      "position": 25,
+      "renderTypeName": "number",
+      "tableColumnId": 3282062,
+      "width": 208,
+      "cachedContents": {
+        "largest": "-87.524679151",
+        "non_null": "1959170",
+        "average": "-87.67282251187343",
+        "null": "1967",
+        "top": [
+          {
+            "item": "-87.77555967",
+            "count": "699"
+          },
+          {
+            "item": "-87.914428439",
+            "count": "642"
+          },
+          {
+            "item": "-87.607401218",
+            "count": "373"
+          },
+          {
+            "item": "-87.640653551",
+            "count": "372"
+          },
+          {
+            "item": "-87.563698424",
+            "count": "371"
+          },
+          {
+            "item": "-87.694361425",
+            "count": "338"
+          },
+          {
+            "item": "-87.636523872",
+            "count": "329"
+          },
+          {
+            "item": "-87.669698315",
+            "count": "311"
+          },
+          {
+            "item": "-87.763339002",
+            "count": "307"
+          },
+          {
+            "item": "-87.63717471",
+            "count": "304"
+          },
+          {
+            "item": "-87.551228484",
+            "count": "298"
+          },
+          {
+            "item": "-87.604630215",
+            "count": "290"
+          },
+          {
+            "item": "-87.61573659",
+            "count": "287"
+          },
+          {
+            "item": "-87.625850989",
+            "count": "283"
+          },
+          {
+            "item": "-87.6381704",
+            "count": "282"
+          },
+          {
+            "item": "-87.720784545",
+            "count": "277"
+          },
+          {
+            "item": "-87.730069729",
+            "count": "267"
+          },
+          {
+            "item": "-87.65848068",
+            "count": "264"
+          },
+          {
+            "item": "-87.638546606",
+            "count": "263"
+          },
+          {
+            "item": "-87.765038653",
+            "count": "262"
+          }
+        ],
+        "smallest": "-87.940202674",
+        "not_null": "1675294",
+        "count": "1961137",
+        "sum": "-141344897.034127175",
+        "cardinality": "171067"
+      },
+      "format": {}
+    },
+    {
+      "id": 339325572,
+      "name": "LOCATION",
+      "dataTypeName": "location",
+      "fieldName": "location",
+      "position": 26,
+      "renderTypeName": "location",
+      "tableColumnId": 31094332,
+      "width": 201,
+      "format": {
+        "view": "coords",
+        "align": "left"
+      }
+    },
+    {
+      "id": 342479787,
+      "name": "Community Areas",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_vrxf_vc4k",
+      "position": 31,
+      "renderTypeName": "number",
+      "tableColumnId": 60501607,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_vrxf-vc4k",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 342479791,
+      "name": "Zip Codes",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_6mkv_f3dw",
+      "position": 32,
+      "renderTypeName": "number",
+      "tableColumnId": 60501611,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_6mkv-f3dw",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 342479792,
+      "name": "Boundaries - ZIP Codes",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_rpca_8um6",
+      "position": 33,
+      "renderTypeName": "number",
+      "tableColumnId": 60501612,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_rpca-8um6",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 342479793,
+      "name": "Census Tracts",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_bdys_3d7i",
+      "position": 34,
+      "renderTypeName": "number",
+      "tableColumnId": 60501613,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_bdys-3d7i",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 342479794,
+      "name": "Wards",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_43wa_7qmu",
+      "position": 35,
+      "renderTypeName": "number",
+      "tableColumnId": 60501614,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_43wa-7qmu",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    },
+    {
+      "id": 342479795,
+      "name": "Historical Wards 2003-2015",
+      "dataTypeName": "number",
+      "fieldName": ":@computed_region_awaf_s7ux",
+      "position": 36,
+      "renderTypeName": "number",
+      "tableColumnId": 60501615,
+      "computationStrategy": {
+        "source_columns": [
+          "location"
+        ],
+        "type": "georegion_match_on_point",
+        "parameters": {
+          "region": "_awaf-s7ux",
+          "primary_key": "_feature_id"
+        }
+      },
+      "format": {}
+    }
+  ],
+  "grants": [
+    {
+      "inherited": false,
+      "type": "viewer",
+      "flags": [
+        "public"
+      ]
+    }
+  ],
+  "metadata": {
+    "rdfSubject": "0",
+    "jsonQuery": {
+      "order": [
+        {
+          "columnFieldName": "violation_date",
+          "ascending": false
+        }
+      ]
+    },
+    "custom_fields": {
+      "Metadata": {
+        "Time Period": "January 1, 2006 to present",
+        "Frequency": "Data is updated daily",
+        "Data Owner": "Buildings"
+      }
+    },
+    "filterCondition": {
+      "metadata": {
+        "advanced": true,
+        "unifiedVersion": 2
+      },
+      "children": [
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 60469701
+            },
+            "operator": "BETWEEN"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 60469706
+            },
+            "includeAuto": 5,
+            "operator": "EQUALS"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 60469707
+            },
+            "operator": "CONTAINS_INSENSITIVE"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 60469708
+            },
+            "includeAuto": 20,
+            "operator": "EQUALS"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 3282046
+            },
+            "operator": "BETWEEN"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 3282048
+            },
+            "includeAuto": 20,
+            "operator": "EQUALS"
+          },
+          "type": "operator",
+          "value": "OR"
+        },
+        {
+          "metadata": {
+            "tableColumnId": {
+              "368396": 3282055
+            },
+            "operator": "EQUALS"
+          },
+          "type": "operator",
+          "value": "OR"
+        }
+      ],
+      "type": "operator",
+      "value": "AND"
+    },
+    "rowIdentifier": 339325551,
+    "rowLabel": "Violation",
+    "availableDisplayTypes": [
+      "table",
+      "fatrow",
+      "page"
+    ],
+    "renderTypeConfig": {
+      "visible": {
+        "table": true
+      }
+    }
+  },
+  "owner": {
+    "id": "scy9-9wg4",
+    "displayName": "cocadmin",
+    "profileImageUrlLarge": "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium": "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall": "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName": "cocadmin",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "query": {
+    "orderBys": [
+      {
+        "ascending": false,
+        "expression": {
+          "columnId": 339325553,
+          "type": "column"
+        }
+      }
+    ]
+  },
+  "rights": [
+    "read"
+  ],
+  "tableAuthor": {
+    "id": "scy9-9wg4",
+    "displayName": "cocadmin",
+    "profileImageUrlLarge": "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium": "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall": "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName": "cocadmin",
+    "type": "interactive",
+    "flags": [
+      "acceptedEula",
+      "mayBeStoriesCoOwner"
+    ]
+  },
+  "tags": [
+    "violations",
+    "inspections"
+  ],
+  "flags": [
+    "default",
+    "ownerMayBeContacted",
+    "restorable",
+    "restorePossibleForType"
+  ]
+}

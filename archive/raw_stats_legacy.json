@@ -1,0 +1,18 @@
+{
+  "csv_mb": 930.39,
+  "parquet_mb": 149.29,
+  "convert_s": 7.04,
+  "rows": 2030101,
+  "cols": 26,
+  "dup_id": 0,
+  "dup_full": 0,
+  "csv_opts": "header=true, all_varchar=true",
+  "missing_top_pct": {
+    "ssa": 80.58,
+    "violation_status_date": 57.48,
+    "violation_location": 50.76,
+    "violation_inspector_comments": 9.4,
+    "violation_ordinance": 2.91,
+    "street_type": 0.79
+  }
+}
