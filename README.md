@@ -12,6 +12,7 @@
 - [Jupyter notebook](notebooks/course_project.ipynb) — постановка, источник, качество, 7 графиков, baseline, план.
 - [Метрики](reports/baseline_metrics.csv), [качество](reports/quality.json), [выводы EDA](reports/eda_insights.json).
 - [Объяснение проекта для защиты](reports/project_explained.md) — данные, цель, этапы работы, чтение карты и TP/TN/FP/FN на результатах модели.
+- [Расшифровка моделей и полей](reports/features_explained.md) — DummyClassifier, SSA, восемь входов модели и причины/обработка пропусков.
 
 ## Быстрое воспроизведение без скачивания
 
