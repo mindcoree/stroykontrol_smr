@@ -1,0 +1,23 @@
+{
+  "retrieved_at": "2026-10-09T12:28:46.771411+00:00",
+  "purpose": "Geographic context only; no joining or changes to modeling data",
+  "projection": "Local equirectangular, reference latitude 41.85 N, km; north up",
+  "sources": [
+    {
+      "file": "chicago_community_areas.geojson",
+      "title": "City of Chicago — Boundaries: Community Areas",
+      "download_url": "https://data.cityofchicago.org/resource/igwz-8jzy.geojson?$limit=100",
+      "source_page": "https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy",
+      "sha256": "3468ac30bd813fa17d755b12a911a43c44f251465604bbe8e1ca1b1b540dca66",
+      "features": 77
+    },
+    {
+      "file": "lake_michigan.geojson",
+      "title": "Natural Earth — 1:10m Lakes, Lake Michigan feature",
+      "download_url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_lakes.geojson",
+      "source_page": "https://www.naturalearthdata.com/about/terms-of-use/",
+      "sha256": "49a03ad43f6e08a886cdea6d8ae527a63edbd486b693fc91049b73a53762a5ce",
+      "features": 1
+    }
+  ]
+}

@@ -296,9 +296,9 @@ def make_presentation(q,m,eda,checks):
     # Remove its duplicate matplotlib title; native slide supplies the title and caption.
     crop=image.crop((0,int(image.height*.13),image.width,image.height))
     path=ROOT/'reports/figures/presentation_geo.png';crop.save(path)
-    s.shapes.add_picture(str(path),Inches(.65),Inches(2.45),width=Inches(8.95))
+    s.shapes.add_picture(str(path),Inches(.7),Inches(2.22),width=Inches(8.95))
     panel(s,'502','инспекции без координат',['Карта показывает наблюдение','Нет нормировки на число зданий','Нельзя оценить опасность района'],h=4.20)
-    t(s,.7,5.92,8.8,.55,eda[6]['conclusion'],12.5,line=1.1)
+    t(s,.733,6.03,8.8,.55,eda[6]['conclusion'],12.5,line=1.1)
     # 17: precise learning/threshold/test protocol.
     s=tpl.page('09 — BASELINE · ПРОТОКОЛ','Временное разделение и обучение модели')
     table(s,['ВЫБОРКА','ПЕРИОД','ИНСПЕКЦИИ','FAILED'],[[name,v['date_from']+' — '+v['date_to'],n(v['n']),ru(v['failed_share']*100)+' %'] for name,v in m['splits'].items()],[2.0,4.3,3.0,2.6],row_h=.58,fonts=[('Consolas',12,True),('Consolas',12,True),('Consolas',14,True),('Consolas',14,True)])

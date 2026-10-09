@@ -198,7 +198,8 @@ def explore(d, labeled, missing):
     insights = []
     def finish(fig, name, title, conclusion):
         fig.suptitle(title, fontsize=14, fontweight='bold', x=.03, ha='left')
-        fig.tight_layout(rect=[0, 0, 1, .92])
+        if name != 'eda07_geo':
+            fig.tight_layout(rect=[0, 0, 1, .92])
         fig.savefig(FIG / f'{name}.png', dpi=180)
         svg = FIG / f'{name}.svg'
         fig.savefig(svg)
@@ -241,9 +242,9 @@ def explore(d, labeled, missing):
     for ax in [a,b]:ax.set(xlabel='Месяц',xticks=[1,3,6,9,12])
     a.set(ylabel='Инспекции, 2006–2025');b.set(ylabel='Доля FAILED',ylim=(0,1))
     finish(fig,'eda06_season','6. Сезонность наблюдений и результата',f"В полных годах месячная доля FAILED составляет {season['mean'].min():.1%}–{season['mean'].max():.1%}. Месяц кодируется циклически; это ассоциация, смешанная с составом служб и лет, а не причинный эффект сезона.")
+    from src.geography import inspection_map
     coords=d.dropna(subset=['longitude','latitude'])
-    fig,ax=plt.subplots(figsize=(9,4.5));hb=ax.hexbin(coords.longitude,coords.latitude,gridsize=55,bins='log',cmap='Oranges',mincnt=1)
-    ax.set(xlabel='Долгота',ylabel='Широта');fig.colorbar(hb,ax=ax,label='Количество инспекций (лог. шкала)')
+    fig=inspection_map(d)
     finish(fig,'eda07_geo','7. Пространственная концентрация инспекций',f"У {len(d)-len(coords):,} инспекций нет пригодных координат. Карта показывает интенсивность наблюдения в архиве, без нормировки на число зданий. География может помочь ранжированию, но не позволяет объявить район более опасным.")
     save_json(REP/'eda_insights.json',insights)
     return insights

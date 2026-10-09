@@ -11,6 +11,7 @@
 - [Презентация PDF](reports/presentation.pdf).
 - [Jupyter notebook](notebooks/course_project.ipynb) — постановка, источник, качество, 7 графиков, baseline, план.
 - [Метрики](reports/baseline_metrics.csv), [качество](reports/quality.json), [выводы EDA](reports/eda_insights.json).
+- [Объяснение проекта для защиты](reports/project_explained.md) — данные, цель, этапы работы, чтение карты и TP/TN/FP/FN на результатах модели.
 
 ## Быстрое воспроизведение без скачивания
 
@@ -31,6 +32,8 @@ Notebook использует те же функции из `src/`, чтобы �
 ```bash
 python -m ipykernel install --user --name stroykontrol-smr --display-name 'Стройконтроль СМР'
 ```
+
+Географическая подложка включает 77 районов Чикаго и озеро Мичиган. Файлы GeoJSON и происхождение с SHA-256 сохранены в `data/geography/`; построение карты не требует интернета или ключа API. Источники: [City of Chicago](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas/igwz-8jzy), [Natural Earth](https://www.naturalearthdata.com/about/terms-of-use/). Только карту можно пересобрать командой `python -m src.geography`.
 
 ## Полное воспроизведение: скачивание и аудит
 
